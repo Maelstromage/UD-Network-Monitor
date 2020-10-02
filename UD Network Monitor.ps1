@@ -5,7 +5,7 @@
 ###############################################################
 
 Import-Module UniversalDashboard.community
-$compsList = Import-Csv $PSScriptRoot\devices2.csv
+$compsList = Import-Csv $PSScriptRoot\example.csv
 if (!(Test-Path "$PSScriptRoot\logs\")){
     New-Item "$PSScriptRoot\logs\" -ItemType directory
 }
