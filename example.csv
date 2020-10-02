@@ -1,0 +1,3 @@
+Device,Name,Where,SwitchIP,SwitchName,SwitchPort,Up
+IP address,Name of Device,Where it isin the building,The IP of the Switch of the attached Device,Name of the Switch,Which port the switch is on,Used for code
+192.168.1.1,Server1,router,192.168.2.2,Switch2,g1/0/1,NA
