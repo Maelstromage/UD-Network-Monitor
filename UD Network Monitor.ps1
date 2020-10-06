@@ -25,7 +25,9 @@ $Dashboard = New-UDDashboard -title "Network Monitor" -Content {
         write-host $iftttalert
         if($value1 -ne ""){
             $body = @{value1 = $value1}
-            $uri = "https://maker.ifttt.com/trigger/Switch%20Down/with/key/luni6fVcjoIVVIO3nV8nQsNOt6RJCYFrznSvwB_DGmb"
+            $uri = "https://maker.ifttt.com/trigger/Switch%20Down/with/key/xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            # if you have ifttt you can get an alert when a device goes down replace xxxxxxxxxxxxxxxxxx with your key and Switch%20Down with the title of your app.
+            # if you dont want to use this make sure to comment out the line below ($null = Invoke-RestMethod...)
             $null = Invoke-RestMethod -Method Get -Uri $Uri -Body $body
         }
         $compsList | ForEach-Object {
