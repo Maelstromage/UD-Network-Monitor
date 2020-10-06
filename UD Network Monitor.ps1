@@ -17,6 +17,8 @@ $Dashboard = New-UDDashboard -title "Network Monitor" -Content {
             $compsList[$i].up = if(!(Test-Connection -computername $compsList[$i].Device -Quiet -Count 1)){"Down"}else{"Up"}
             if($compsList[$i].up -eq "Down"){
                 Invoke-UDJavaScript -JavaScript "var audio = new Audio('/audio/dong.mp3');audio.play();"
+                # Need to place an audio file in C:\Program Files\WindowsPowerShell\Modules\UniversalDashboard.Community\2.9.0\client\
+                # I created a new folder named \audio and placed an mp3 in the folder.
                 $value1 += "`n" + $compsList[$i].Device + " " + $compsList[$i].Name + " " + $compsList[$i].Where + " FAILED"
             }
         }
